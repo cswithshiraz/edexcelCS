@@ -1,0 +1,43 @@
+'''
+UNIT 2 : Programming  | 8 - Data Structures
+Page: 68
+'''
+
+scores = [
+            ['Alexis', 1, 19],
+            ['Seema', 1, 29],
+            ['Seema', 2, 44],
+            ['Lois', 1, 10],
+            ['Alexis', 2, 17],
+            ['Alexis', 3, 36],
+            ['Dion', 1, 23],
+            ['Emma', 1, 27],
+            ['Alexis', 2, 48]
+    ]
+
+# Level 1 winner
+highest = 0
+for i in range(len(scores)):
+    if scores[i][1] == 1:
+        if scores[i][2] > highest:
+            highest = scores[i][2]
+            winner = scores[i][0]
+print('Level 1 winner:', winner, 'Score:', highest)
+
+# Level 2 winner
+highest = 0
+for i in range(len(scores)):
+    if scores[i][1] == 2:
+        if scores[i][2] > highest:
+            highest = scores[i][2]
+            winner = scores[i][0]
+print('Level 2 winner:', winner, 'Score:', highest)
+
+# Level 3 winder
+highest = 0
+for i in range(len(scores)):
+    if scores[i][1] == 3:
+        if scores[i][2] > highest:
+            highest = scores[i][2]
+            winner = scores[i][0]
+print('Level 3 winner:', winner, 'Score:', highest)
