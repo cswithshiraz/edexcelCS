@@ -1,0 +1,59 @@
+# CS 2023 P2/Q6
+
+# Q06
+
+tbl_breed = ["Red Chittagong", "Sussex", "Dexter", "Abondance", "Sahiwal", "Vorderwald", 
+             "Ayrshire", "Jersey","Randall", "Alderney", "Carora", "Gloucester"]
+tbl_rating = [1, 2, 3, 2, 3, 1, 2, 1, 2, 1, 3, 2]
+tbl_count = [6, 3, 8, 7, 6, 4, 3, 7, 3, 3, 4, 7]
+tbl_volume = [7.5, 5.7, 11.4, 11.4, 22.0, 15.2, 21.0, 18.3, 19.0, 9.0, 23.1, 16.0]
+tbl_dailyVolume = []
+
+# ----------------------------------------------
+# Write your code below this line
+
+# calculate the daily volume of milk produced by each breed
+# add this daily volume to the data structure tbl_dailyVolume
+
+for i in range(len(tbl_count)):
+    daily_volume = tbl_count[i] * tbl_volume[i]
+    tbl_dailyVolume.append(daily_volume)
+
+print(tbl_dailyVolume)
+
+
+#• display a message informing the user what each field holds, such as breed, rating, volume per cow, count and total volume
+print('Breed: Holds the breed of the cow')
+print('Rating: shows how easy to take care of the breed')
+print('Volume: How much each breed give as milk in litres')
+print('Count: How many of the breed the farm has')
+print('Total volume: Amount of milk that the breed produce in total')
+
+#• display the data for each breed
+#• calculate and display the total volume of milk produced each day by the herd
+print()
+
+print('Fields are: Breed, Rating, Volume(cow), Count, Volume(day)')
+
+total_volume = 0
+for x in range(len(tbl_breed)):
+    print(tbl_breed[x], tbl_rating[x], tbl_volume[x], tbl_count[x], tbl_dailyVolume[x])
+    total_volume += tbl_dailyVolume[x]
+
+print('Total:', total_volume, 'litres')
+
+print()
+#• find the recommended breed
+#• display the recommended breed by name.
+
+highest_volume = 0
+volume = 0
+best_breed = ''
+for y in range(len(tbl_breed)):
+    if tbl_rating[y] == 1:
+        if tbl_dailyVolume[y] > highest_volume:
+            highest_volume = tbl_dailyVolume[y]
+            volume = tbl_volume[y]
+            best_breed = tbl_breed[y]
+
+print('Recommended breed:', best_breed, 'rating: 1', 'volume:', volume)
