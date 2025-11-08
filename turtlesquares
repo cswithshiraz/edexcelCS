@@ -1,0 +1,76 @@
+from turtle import *
+from random import randint
+
+color('white')
+speed(40)
+
+penup()
+goto(-100,150)
+pendown()
+
+'''
+# Create tracks
+for i in range(1,16):
+    write(i, align = 'center')
+    right(90)
+    penup()
+    forward(20)
+    pendown()
+    forward(200)
+    
+    penup()
+    backward(220)
+    left(90)
+    forward(20)
+'''
+# create runners
+
+bob = Turtle()
+bob.color('green')
+bob.shape('turtle')
+bob.width(4)
+
+
+bob.penup()
+bob.left(90)
+bob.goto(0, 10)
+bob.pendown()
+
+tim = Turtle()
+tim.color('red')
+tim.shape('turtle')
+
+tim.penup()
+tim.width(4)
+tim.left(270)
+tim.goto(0, -10)
+tim.pendown()
+
+ben = Turtle()
+ben.width(4)
+ben.color('yellow')
+ben.shape('turtle')
+
+ben.penup()
+ben.right(180)
+ben.goto(-10, 0)
+ben.pendown()
+
+ed = Turtle()
+ed.width(4)
+
+ed.color('orange')
+ed.shape('turtle')
+
+ed.penup()
+ed.goto(10, 0)
+ed.pendown()
+
+for turn in range(30):
+    bob.forward(5)
+    tim.forward(5)
+    ed.forward(5)
+    ben.forward(5)
+#sue.right(180)
+
+
