@@ -1,0 +1,34 @@
+student_records = [
+                    ['Arfa', 'Dehiwala', '12A'],
+                    ['Sara', 'Galle', '12B'],
+                    ['Aysha', 'Kandy', '12C']     
+                    ]
+
+def append_record(record):
+    student_records.append(record)
+    print(student_records)
+
+def find_and_delete_record(name):
+    for student_detail in student_records:
+        if student_detail[0] == name:
+            student_records.remove(student_detail)
+    print(student_records)
+
+def list_records():
+    for student_detail in student_records:
+        print(student_detail)
+
+# main program
+# appending a record
+record = []
+record.append('Abdullah')
+record.append('Jaffna')
+record.append('12B')
+
+append_record(record)
+
+# find and delete record
+find_and_delete_record('Arfa')
+
+# display all records
+list_records()
